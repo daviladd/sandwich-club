@@ -2,4 +2,11 @@
 <resources>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- Margins for TextViews: -->
+    <!-- TextViews containing labels: -->
+    <dimen name="tv_label_margin_top">8dp</dimen>
+    <!-- TextViews containing values: -->
+    <dimen name="tv_indent_from_label_left">16dp</dimen>
+    <dimen name="tv_indent_from_label_up">0dp</dimen>
+    <dimen name="tv_margin_right">16dp</dimen>
 </resources>
