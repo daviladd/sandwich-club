@@ -30,63 +30,63 @@
 
         <TextView
             android:id="@+id/place_of_origin_label"
+            style="@style/text_views_label"
             android:text="@string/detail_place_of_origin_label"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_iv"
-            style="@style/text_views_label"/>
+            app:layout_constraintTop_toBottomOf="@+id/image_iv"/>
 
         <TextView
             android:id="@+id/origin_tv"
+            style="@style/text_views_content"
             android:text="@string/detail_place_of_origin_default"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/place_of_origin_label"
-            app:layout_constraintTop_toBottomOf="@+id/place_of_origin_label"
-            style="@style/text_views_content"/>
+            app:layout_constraintTop_toBottomOf="@+id/place_of_origin_label"/>
 
         <TextView
             android:id="@+id/also_know_as_label"
+            style="@style/text_views_label"
             android:text="@string/detail_also_known_as_label"
             app:layout_constraintStart_toStartOf="@+id/place_of_origin_label"
-            app:layout_constraintTop_toBottomOf="@+id/origin_tv"
-            style="@style/text_views_label"/>
+            app:layout_constraintTop_toBottomOf="@+id/origin_tv"/>
 
         <TextView
             android:id="@+id/also_known_tv"
+            style="@style/text_views_content"
             android:text="@string/detail_also_known_as_default"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/also_know_as_label"
-            app:layout_constraintTop_toBottomOf="@+id/also_know_as_label"
-            style="@style/text_views_content"/>
+            app:layout_constraintTop_toBottomOf="@+id/also_know_as_label"/>
 
         <TextView
             android:id="@+id/description_label"
+            style="@style/text_views_label"
             android:text="@string/detail_description_label"
             app:layout_constraintStart_toStartOf="@+id/also_know_as_label"
-            app:layout_constraintTop_toBottomOf="@+id/also_known_tv"
-            style="@style/text_views_label"/>
+            app:layout_constraintTop_toBottomOf="@+id/also_known_tv"/>
 
         <TextView
             android:id="@+id/description_tv"
+            style="@style/text_views_content"
             android:text="@string/detail_description_default"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/description_label"
-            app:layout_constraintTop_toBottomOf="@+id/description_label"
-            style="@style/text_views_content"/>
+            app:layout_constraintTop_toBottomOf="@+id/description_label"/>
 
         <TextView
             android:id="@+id/ingredients_label"
+            style="@style/text_views_label"
             android:text="@string/detail_ingredients_label"
             app:layout_constraintStart_toStartOf="@+id/description_label"
-            app:layout_constraintTop_toBottomOf="@+id/description_tv"
-            style="@style/text_views_label"/>
+            app:layout_constraintTop_toBottomOf="@+id/description_tv"/>
 
         <TextView
             android:id="@+id/ingredients_tv"
+            style="@style/text_views_content"
             android:text="@string/detail_ingredients_default"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/ingredients_label"
-            app:layout_constraintTop_toBottomOf="@+id/ingredients_label"
-            style="@style/text_views_content"/>
+            app:layout_constraintTop_toBottomOf="@+id/ingredients_label"/>
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
