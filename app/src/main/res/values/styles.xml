@@ -8,4 +8,21 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="text_views_content">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/tv_margin_right</item>
+        <item name="android:layout_marginLeft">@dimen/tv_indent_from_label_left</item>
+        <item name="android:layout_marginRight">@dimen/tv_margin_right</item>
+        <item name="android:layout_marginStart">@dimen/tv_indent_from_label_left</item>
+        <item name="android:layout_marginTop">@dimen/tv_indent_from_label_up</item>
+    </style>
+
+    <style name="text_views_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/tv_label_margin_top</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>

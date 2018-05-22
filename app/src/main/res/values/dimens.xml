@@ -2,6 +2,8 @@
 <resources>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_general_padding">16dp</dimen>
+    <dimen name="image_height">200dp</dimen>
     <!-- Margins for TextViews: -->
     <!-- TextViews containing labels: -->
     <dimen name="tv_label_margin_top">8dp</dimen>

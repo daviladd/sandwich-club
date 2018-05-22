@@ -26,8 +26,6 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        ImageView ingredientsIv = findViewById(R.id.image_iv);
-
         Intent intent = getIntent();
         if (intent == null) {
             closeOnError();
@@ -50,11 +48,7 @@ public class DetailActivity extends AppCompatActivity {
         }
 
         populateUI(sandwich);
-        Picasso.with(this)
-                .load(sandwich.getImage())
-                .into(ingredientsIv);
 
-        setTitle(sandwich.getMainName());
     }
 
     private void closeOnError() {
@@ -62,16 +56,35 @@ public class DetailActivity extends AppCompatActivity {
         Toast.makeText(this, R.string.detail_error_message, Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * Retrieves the values to be displayed from a given Sandwich object and updates the
+     * UI with them.
+     *
+     * @param sandwich The Sandwich object which values are to be displayed
+     */
     private void populateUI(Sandwich sandwich) {
+        // This is the only place we manipulate the UI contents, therefore, they
+        //  are kept local to this function.
+        ImageView ingredientsIv = findViewById(R.id.image_iv);
         TextView placeOfOriginTextView = findViewById(R.id.origin_tv);
         TextView descriptionTextView = findViewById(R.id.description_tv);
         TextView alsoKnownAsTextView = findViewById(R.id.also_known_tv);
         TextView ingredientsTextView = findViewById(R.id.ingredients_tv);
 
+        // Set the Activity title to the name of the Sandwich:
+        setTitle(sandwich.getMainName());
+
+        // Get the corresponding texts from the Sandwich object and update the TextViews:
         placeOfOriginTextView.setText(getPlaceOfOrigin(sandwich));
         descriptionTextView.setText(getDescription(sandwich));
         alsoKnownAsTextView.setText(getAliases(sandwich));
         ingredientsTextView.setText(getIngredients(sandwich));
+
+        // Set the image to be displayed:
+        Picasso.with(this)
+                .load(sandwich.getImage())
+                .into(ingredientsIv);
+
     }
 
 
@@ -84,6 +97,7 @@ public class DetailActivity extends AppCompatActivity {
      */
     private String getPlaceOfOrigin(Sandwich sandwich) {
         String origin = sandwich.getPlaceOfOrigin();
+
         if ((origin == null) || (origin.contentEquals(""))) {
             origin = getString(R.string.detail_place_of_origin_default);
         }
@@ -98,8 +112,10 @@ public class DetailActivity extends AppCompatActivity {
      * @return String containing all the known aliases
      */
     private String getAliases(Sandwich sandwich) {
-        List<String> stringList = sandwich.getAlsoKnownAs();
         String alias;
+        List<String> stringList = sandwich.getAlsoKnownAs();
+
+
         if ((stringList == null) || (stringList.size() == 0)) {
             alias = getString(R.string.detail_also_known_as_default);
         } else {
@@ -119,6 +135,7 @@ public class DetailActivity extends AppCompatActivity {
      */
     private String getDescription(Sandwich sandwich) {
         String description = sandwich.getDescription();
+
         if ((description == null) || (description.contentEquals(""))) {
             description = getString(R.string.detail_description_default);
         }
@@ -150,7 +167,7 @@ public class DetailActivity extends AppCompatActivity {
      * separating the members with the String provided to this means
      *
      * @param stringList List of Strings
-     * @param separator String to separate the strings in the stringList
+     * @param separator  String to separate the strings in the stringList
      * @return String built with the content of the List of String separated with the specified separator
      */
     private String getStringFromStringList(List<String> stringList, String separator) {

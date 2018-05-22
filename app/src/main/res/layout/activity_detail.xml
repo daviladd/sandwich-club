@@ -13,19 +13,13 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
+        android:padding="@dimen/activity_general_padding"
         android:scrollbars="none">
 
         <ImageView
             android:id="@+id/image_iv"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="@dimen/image_height"
             android:adjustViewBounds="true"
             android:contentDescription="@string/sandwich_picture_content_description"
             android:scaleType="centerCrop"
@@ -36,102 +30,63 @@
 
         <TextView
             android:id="@+id/place_of_origin_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="@dimen/tv_label_margin_top"
             android:text="@string/detail_place_of_origin_label"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_iv"/>
+            app:layout_constraintTop_toBottomOf="@+id/image_iv"
+            style="@style/text_views_label"/>
 
         <TextView
             android:id="@+id/origin_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/tv_margin_right"
-            android:layout_marginLeft="@dimen/tv_indent_from_label_left"
-            android:layout_marginRight="@dimen/tv_margin_right"
-            android:layout_marginStart="@dimen/tv_indent_from_label_left"
-            android:layout_marginTop="@dimen/tv_indent_from_label_up"
             android:text="@string/detail_place_of_origin_default"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/place_of_origin_label"
-            app:layout_constraintTop_toBottomOf="@+id/place_of_origin_label"/>
+            app:layout_constraintTop_toBottomOf="@+id/place_of_origin_label"
+            style="@style/text_views_content"/>
 
         <TextView
             android:id="@+id/also_know_as_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/tv_label_margin_top"
             android:text="@string/detail_also_known_as_label"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/place_of_origin_label"
-            app:layout_constraintTop_toBottomOf="@+id/origin_tv"/>
+            app:layout_constraintTop_toBottomOf="@+id/origin_tv"
+            style="@style/text_views_label"/>
 
         <TextView
             android:id="@+id/also_known_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/tv_margin_right"
-            android:layout_marginLeft="@dimen/tv_indent_from_label_left"
-            android:layout_marginRight="@dimen/tv_margin_right"
-            android:layout_marginStart="@dimen/tv_indent_from_label_left"
-            android:layout_marginTop="@dimen/tv_indent_from_label_up"
             android:text="@string/detail_also_known_as_default"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/also_know_as_label"
-            app:layout_constraintTop_toBottomOf="@+id/also_know_as_label"/>
+            app:layout_constraintTop_toBottomOf="@+id/also_know_as_label"
+            style="@style/text_views_content"/>
 
         <TextView
             android:id="@+id/description_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/tv_label_margin_top"
             android:text="@string/detail_description_label"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/also_know_as_label"
-            app:layout_constraintTop_toBottomOf="@+id/also_known_tv"/>
+            app:layout_constraintTop_toBottomOf="@+id/also_known_tv"
+            style="@style/text_views_label"/>
 
         <TextView
             android:id="@+id/description_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/tv_margin_right"
-            android:layout_marginLeft="@dimen/tv_indent_from_label_left"
-            android:layout_marginRight="@dimen/tv_margin_right"
-            android:layout_marginStart="@dimen/tv_indent_from_label_left"
-            android:layout_marginTop="@dimen/tv_indent_from_label_up"
             android:text="@string/detail_description_default"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/description_label"
-            app:layout_constraintTop_toBottomOf="@+id/description_label"/>
+            app:layout_constraintTop_toBottomOf="@+id/description_label"
+            style="@style/text_views_content"/>
 
         <TextView
             android:id="@+id/ingredients_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/tv_label_margin_top"
             android:text="@string/detail_ingredients_label"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/description_label"
-            app:layout_constraintTop_toBottomOf="@+id/description_tv"/>
+            app:layout_constraintTop_toBottomOf="@+id/description_tv"
+            style="@style/text_views_label"/>
 
         <TextView
             android:id="@+id/ingredients_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/tv_margin_right"
-            android:layout_marginLeft="@dimen/tv_indent_from_label_left"
-            android:layout_marginRight="@dimen/tv_margin_right"
-            android:layout_marginStart="@dimen/tv_indent_from_label_left"
-            android:layout_marginTop="@dimen/tv_indent_from_label_up"
             android:text="@string/detail_ingredients_default"
-
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/ingredients_label"
-            app:layout_constraintTop_toBottomOf="@+id/ingredients_label"/>
+            app:layout_constraintTop_toBottomOf="@+id/ingredients_label"
+            style="@style/text_views_content"/>
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
